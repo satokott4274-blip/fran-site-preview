@@ -511,9 +511,9 @@ section{padding-block:clamp(3.2rem,7vw,5.5rem)}
 .map-link:hover{border-bottom-color:var(--ochre)}
 .map-wrap iframe{
   position:relative; z-index:1; display:block; width:100%; height:100%; border:0;
-  opacity:0; transition:opacity .4s ease;
+  opacity:0; pointer-events:none; transition:opacity .4s ease;
 }
-.map-wrap iframe.is-ok{opacity:1}
+.map-wrap iframe.is-ok{opacity:1; pointer-events:auto}
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]) .map-wrap iframe.is-ok{filter:invert(.92) hue-rotate(180deg)}
 }
@@ -1284,9 +1284,8 @@ footer{padding-block:2.4rem; font-size:.77rem; color:var(--ink-faint); letter-sp
   /* ---------- 地図（読み込めない環境ではフォールバックを見せる） ---------- */
   const mapFrame = document.getElementById('franMap');
   if (mapFrame) {
-    let mapOk = false;
-    mapFrame.addEventListener('load', () => { mapOk = true; mapFrame.classList.add('is-ok'); });
-    setTimeout(() => { if (!mapOk) mapFrame.remove(); }, 2500);
+    /* 読み込めたら地図を出す。読み込めない環境では住所カードがそのまま見える。 */
+    mapFrame.addEventListener('load', () => mapFrame.classList.add('is-ok'));
   }
 
   /* ---------- 体の地図 ---------- */
