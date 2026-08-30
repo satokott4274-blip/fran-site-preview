@@ -90,7 +90,8 @@ img{max-width:100%}
 .header-in{display:flex; align-items:center; gap:1.4rem; min-height:66px}
 .brand{display:flex; align-items:baseline; gap:.7rem; text-decoration:none; margin-right:auto}
 .brand-mark{font-family:var(--f-label); font-size:1.45rem; letter-spacing:.24em}
-.brand-sub{font-size:.68rem; letter-spacing:.14em; color:var(--ink-faint)}
+.brand-sub{font-size:.68rem; letter-spacing:.14em; color:var(--ink-faint); white-space:nowrap}
+@media(max-width:430px){ .brand-sub{display:none} }
 .nav{display:none; gap:1.5rem; font-size:.82rem; letter-spacing:.06em}
 .nav a{text-decoration:none; color:var(--ink-soft); padding-block:.4rem}
 .nav a:hover{color:var(--ochre)}
