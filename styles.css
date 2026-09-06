@@ -130,3 +130,26 @@
 @media(max-width:800px){.cupping-film{grid-template-columns:minmax(0,1fr);gap:32px;padding:35px 25px;margin-bottom:65px}.cupping-film-copy{max-width:380px;justify-self:center;width:100%}.cupping-film-copy h3{font-size:1.7rem}}
 @media(max-width:600px){.cupping-film{padding:30px 0;border-radius:3px 3px 45px 3px}.cupping-film-copy{padding-inline:8px}.cupping-film-copy>p{font-size:.875rem}.cupping-film-copy h3{font-size:1.6rem}}
 @media(max-width:374px){.cupping-film{margin-inline:calc(-1 * var(--gutter));border-radius:0}.cupping-film-copy{padding-inline:var(--gutter)}}
+
+.treatment-abdomen{margin-top:70px}
+.treatment-abdomen .treatment-photo{height:auto;aspect-ratio:4/3;border-radius:70px 3px 3px 3px}
+.treatment-abdomen .treatment-photo img{object-fit:contain}
+.treatment-abdomen figcaption{top:19px;bottom:auto;color:var(--forest);text-shadow:0 1px 6px #f7f7f0}
+.visit-comfort{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:45px;padding:30px;background:#edf0e7}
+.visit-comfort .small-en{font-size:.65rem;color:var(--muted)}
+.visit-comfort h3{font-size:1rem;font-weight:500;margin:10px 0}
+.visit-comfort p{font-size:.875rem;line-height:1.9;color:var(--muted)}
+.journal .eyebrow{margin-bottom:24px}
+.journal-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px}
+.journal-card{display:flex;flex-direction:column;min-width:0;padding:25px 0 20px;border-top:1px solid var(--forest);border-bottom:1px solid var(--line)}
+.journal-meta{display:flex;flex-wrap:wrap;gap:10px 15px;font-size:.625rem;color:var(--muted);align-items:center}
+.journal-meta time{font:.875rem var(--en);letter-spacing:.06em}
+.journal-card h3{font-family:var(--serif);font-weight:500;font-size:1.35rem;line-height:1.7;margin:24px 0 16px}
+.journal-card>p{font-size:.875rem;line-height:2;color:var(--muted);margin-bottom:30px}
+.journal-read{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:auto;font-size:.75rem}
+.journal-read>span{font-size:1.25rem;transition:transform .2s}
+.journal-card:hover .journal-read>span{transform:translate(3px,-3px)}
+.journal-footer{display:flex;flex-wrap:wrap;gap:15px 35px;justify-content:flex-end;margin-top:30px}
+.journal-footer .text-link{font-size:.8125rem}
+@media(max-width:800px){.journal-list{gap:22px}.journal-card h3{font-size:1.1rem}.visit-comfort{gap:22px;padding:25px}}
+@media(max-width:600px){.treatment-abdomen{margin-top:50px}.treatment-abdomen .treatment-photo{border-radius:45px 3px 3px 3px}.visit-comfort{grid-template-columns:minmax(0,1fr);gap:24px;padding:25px;margin-top:30px}.visit-comfort>div+div{padding-top:24px;border-top:1px solid var(--line)}.journal-list{grid-template-columns:minmax(0,1fr);gap:28px}.journal-card h3{font-size:1.3rem;margin-top:18px}.journal-card>p{margin-bottom:20px}.journal-footer{justify-content:flex-start;gap:8px;margin-top:25px}}
