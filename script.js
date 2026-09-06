@@ -59,6 +59,10 @@
   });
   matchMedia('(min-width: 801px)').addEventListener('change', event => { if (event.matches) closeNav(); });
 
+  document.querySelectorAll('[data-open-parking]').forEach(link => link.addEventListener('click', () => {
+    document.getElementById('parking-route').open = true;
+  }));
+
   const picked = new Set();
   const buttons = [...document.querySelectorAll('[data-spot]')];
   const empty = document.getElementById('finder-empty');
